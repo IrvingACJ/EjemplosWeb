@@ -2,12 +2,6 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>Ejemplos </h1>
-    <p class="lead">MVC - Javascript - HTML - Jquery</p>
-</div>
-
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -25,12 +19,52 @@
                 </div>
             </div>
             <div class="modal-body">
-                ...
+                <!--Input donde se imprimira                                                                                       -->
+                <input ID="NewID" class="form-control" type="text" placeholder="ID..." readonly>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Generar ID</button>
+                <!--                                                                            NOMBRE DE FUNCION                                  -->
+                <button type="button" class="btn btn-primary" onclick="GenerarID();">Generar ID</button>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <h1 style="margin-top:0px;">Ejemplos</h1>
+    <p class="lead">MVC - Javascript - HTML - Jquery</p>
+</div>
+<div class="jumbotron">
+    <div class="header">
+        <h2 style="font-size:50px; margin:0px;"><strong>Modal</strong></h2>
+        <div class="row">
+        </div>
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>Referencias</h2>
+                <p>
+                    HomeController:
+                    <ul>
+                        <li>GeneradorID - Linea 15</li>
+                    </ul>
+                </p>
+                <p>
+                    Index:
+                    <ul>
+                        <li>Modal - Linea 5 (Se puede poner en _Layout tambien, solo ocupa ir dentro de &lt;body&gt;)</li>
+                    </ul>
+                </p>
+
+                <p>
+                    _Layout:
+                    <ul>
+                        <li>Boton - Linea 25</li>
+                        <li>Script - Linea 46</li>
+                    </ul>
+                </p>
+            </div>
+
         </div>
     </div>
 </div>

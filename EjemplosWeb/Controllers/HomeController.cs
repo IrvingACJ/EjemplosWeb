@@ -12,6 +12,12 @@ namespace EjemplosWeb.Controllers
         {
             return View();
         }
-
+        public ActionResult GenerarID()
+        {
+            Random obo = new Random();
+            //Genera un numero random del 0 al 999 con ceros antes; Ejemplo: 0023
+            string result = obo.Next(0, 1000).ToString().PadLeft(4, '0');
+            return Content(result);
+        }
     }
 }

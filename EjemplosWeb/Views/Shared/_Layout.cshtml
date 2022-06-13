@@ -21,8 +21,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <!--LANZAR MODAL-->
-                    <li><a style="color:red;" data-toggle="modal" data-target="#exampleModal">Modal</a></li>
+                    <li>
+                        <!--LANZAR MODAL -->
+                        <!--                                 N E C E S A R I O                                  ID del Modal                    -->
+                        <a style="color:red;" data-toggle="modal" data-target="#exampleModal">Modal</a>
+                    </li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
                 </ul>
@@ -33,12 +36,27 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year</p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+<script>
+        // Funcion GenerarID
+        function GenerarID() {
+            $.ajax({
+                url: "@Url.Action("GenerarID", "Home")",
+                success: function (response) {
+                    console.log(response)
+                    $('#NewID').val(response)
+                },
+                error: function (response) {
+                    console.log(response)
+                }
+            });
+        }
+</script>
 </body>
 </html>
